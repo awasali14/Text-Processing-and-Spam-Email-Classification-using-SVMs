@@ -1,0 +1,174 @@
+Dear friends,
+
+ 
+
+It’s time to move beyond the stereotype that machine learning systems need a lot of data. While having more data is helpful, large pretrained models make it practical to build viable systems using a very small labeled training set — perhaps just a handful of examples specific to your application.
+
+ 
+
+About 10 years ago, with the rise of deep learning, I was one of the leading advocates for scaling up data and compute to drive progress. That recipe has carried us far, and it continues to drive progress in large language models, which are based on transformers. A similar recipe is emerging in computer vision based on large vision transformers.
+
+ 
+
+But once those models are pretrained, it takes very little data to adapt them for a new task. With self-supervised learning, pretraining can happen on unlabeled data. So, technically, the model did need a lot of data for training, but that was unlabeled, general text or image data. Then, even with only a small amount of labeled, task-specific data, you can get good performance.
+
+ 
+
+For example, say you have a transformer trained on a massive amount of text, and you want it to perform sentiment classification on your own dataset. The most common techniques are:
+
+    Fine-tuning the model to your dataset. Depending on your application, this can be done with dozens or even fewer examples. 
+    Few-shot learning. In this approach, you create a prompt that includes a few examples (that is, you write a text prompt that lists a handful of pieces of text and their sentiment labels). A common technique for this is in-context learning.
+    Zero-shot learning, in which you write a prompt that describes the task you want done.
+
+These techniques work well. For example, customers of my team Landing AI have been building vision systems with dozens of labeled examples for years. 
+DataSpheres_v6_1200px
+
+The 2010s were the decade of large supervised models, I think the 2020s are shaping up to be the decade of large pretrained models. However, there is one important caveat: This approach works well for unstructured data (text, vision and audio) but not for structured data, and the majority of machine learning applications today are built on structured data.
+
+ 
+
+Models that have been pretrained on diverse unstructured data found on the web generalize to a variety of unstructured data tasks of the same input modality. This is because text/images/audio on the web have many similarities to whatever specific text/image/audio task you might want to solve. But structured data such as tabular data is much more heterogeneous. For instance, the dataset of Titanic survivors probably has little in common with your company’s supply chain data.
+
+
+Now that it's possible to build and deploy machine learning models with very few examples, it’s also increasingly possible to build and launch products very quickly — perhaps without even bothering to collect and use a test set. This is an exciting shift. I’m confident that this will lead to many more exciting applications, including specifically ones where we don’t have much labeled data.
+
+ 
+
+Keep learning!
+
+Andrew
+
+ 
+
+ 
+ 
+News
+JRC-Recrop-600px
+Algorithm Investigators
+
+A new regulatory body created by the European Union promises to peer inside the black boxes that drive social media recommendations.
+
+What’s new: The European Centre for Algorithmic Transparency (ECAT) will study the algorithms that identify, categorize, and rank information on social media sites and search engines.
+
+How it works: ECAT is empowered to determine whether algorithms (AI and otherwise) comply with the European Union’s Digital Services Act, which aims to block online hate speech, certain types of targeted ads, and other objectionable content. The agency, which is not yet fully staffed, will have between 30 to 40 employees including specialist AI researchers. Its tasks fall into three major categories:
+
+    Investigation: ECAT will evaluate the functioning of “black box” algorithms. It will analyze reports and audits conducted by companies legally required to submit reports to European regulators. It will establish procedures for independent researchers and regulators to gain access to data — the nature of which is unspecified — related to algorithms.
+    Research: The agency will study the potential of recommendation algorithms to spread illegal content, infringe human rights, harm democratic processes, or harm user health. It will evaluate measures to mitigate existing risks and identify new ones as they emerge. It will also study long-term social impacts of algorithms and propose ways to make them more accountable and transparent.
+    Community building: The agency aims to act as a hub for sharing information and best practices among researchers in academia, industry, civil service, and NGOs.
+
+Behind the news: EU regulators are increasingly targeting AI. On April 13, the European Data Protection Board launched a task force to coordinate investigations by several nations into whether OpenAI violated privacy laws when it trained ChatGPT. Since 2021, EU lawmakers have been crafting the AI Act, a set of rules designed to regulate automated systems according to their potential for harm. The AI Act is expected to pass into law later this year. 
+
+Why it matters: The EU is on the leading edge of regulating AI. As with many national-level efforts, Europe’s investigations into social media algorithms could reduce harms and promote social well-being well beyond the union’s borders.
+We’re thinking: This is a welcome step. Governments need to understand technology before they can craft thoughtful regulations to manage it. ECAT looks like a strong move in that direction. 
+
+ 
+JPMORGAN
+Crystal Ball for Interest Rates
+
+One of the world’s largest investment banks built a large language model to map cryptic government statements to future government actions.
+What’s new: JPMorgan Chase trained a model based on ChatGPT to score statements by a United States financial regulator according to whether it plans to raise or lower interest rates, Bloomberg reported.
+How it works: The U.S. Federal Reserve, a government agency that’s empowered to set certain influential interest rates, periodically comments on the national economy. Its words are deliberately vague to prevent markets from acting in advance of formal policy decisions. 
+
+    The JPMorgan Chase team trained the model on an unspecified volume of speeches and public statements. 
+    Given a new statement, it assigns a score. The higher the score, the more likely the agency will raise interest rates. For example, if the model assigns a score of 10, the firm’s economists predict a 10 percent probability that interest rates will rise. 
+    The team used the same technique to train similar models based on statements of the Bank of England and European Central Bank. It plans to train models for 30 more central banks in the coming months.
+    In building its model, the team may have followed the Federal Reserve’s own work, in which the agency fine-tuned GPT-3 to classify its own statements and found that the model agreed with human experts 37 percent of the time.
+
+Results: The team tested the model by scoring past 25 years of Federal Reserve statements and speeches. They didn’t describe the results in detail but said they found a general correlation between the predicted and actual interest rate fluctuations. 
+
+Behind the news: Prior to the advent of large language models, investors tried to predict the impact of central bank announcements via sentiment analysis, timing the interval between official meetings and publication of minutes, and watching the sizes of their briefcases. 
+
+Why it matters: Central banks use interest rates to steer their country’s economies. Lower rates spur economic growth and fight recessions by making money cheaper to borrow. Higher interest rates tamp down inflation by making borrowing more expensive. If you can predict such changes accurately, you stand to reap huge profits by using your predictions to guide investments. 
+
+We’re thinking: Custom models built by teams outside the tech sector are gaining steam. Bloomberg itself — which makes most of its money providing financial data —  trained a BLOOM-style model on its corpus and found that it performed financial tasks significantly better than a general-purpose model.
+
+ 
+A MESSAGE FROM DEEPLEARNING.AI
+The Batch ads and exclusive banners (23)
+
+Join us for a live workshop on Wednesday, May 31, 2023 at 10:00 a.m. Pacific Time, and discover how customized fine-tuning techniques can help you harness pretrained language models to build robust AI applications. Register now
+
+ 
+ARCHITECTURE_600px
+Architect’s Sketchbook
+
+Text-to-image generators are visualizing the next wave of architectural innovation.
+
+What’s new: Patrick Schumacher, principal architect at Zaha Hadid Architects, explained how the company uses generative AI to come up with ideas. He made the remarks at an industry roundtable called AI and the Future of Design. 
+
+How it works: The architects use DALL•E 2, Midjourney, and Stable Diffusion to generate exterior and interior images of concepts in development. Schumacher showed generated images for projects in development, including a high-rise complex in Hong Kong and Neom, a massive smart city planned for Saudi Arabia. 
+
+    The firm uses between 10 and 15 percent of the models’ output to present rough ideas and/or guide further development. Then 3D artists use traditional methods to build 3D models of building interiors and exteriors.
+    Prompts frequently include Zaha Hadid’s name, evoking the curvilinear style associated with the firm and the deceased founder whose name it bears. Prompts also describe the project’s setting and context; for example, “Zaha Hadid museum aerial view Baku, high quality” and “Zaha Hadid tower in mountainscape, high quality.” 
+    The firm deploys its models on the cloud, but in the future, it plans to move to an in-house data center.
+
+Behind the news: Text-to-image models are finding their way into a variety of design disciplines. 
+
+    In the same roundtable, artist Refik Anadol described how he uses DALL•E 2 to create visual installations such as immersive projections of AI-generated images. 
+    Industrial designer Ross Lovegrove described using Midjourney and DALL•E 2 to create concepts for consumer products like cars, furniture, and suitcases.
+    In April, the first AI Fashion Week showcased clothing collections from over 350 designers who used generated imagery in their creative processes.
+
+Why it matters: Zaha Hadid Architects has worked on Olympic venues, international airport terminals, and skyscrapers. Millions of people soon may interact with buildings visualized by AI.
+We’re thinking: What a great example of human-computer collaboration: The models learn from the architects’ past designs to help the them envision fresh concepts.
+
+ 
+MICRO
+Deep Learning at (Small) Scale
+
+TinyML shows promise for bringing deep learning to applications where electrical power is scarce, processing in the cloud is impractical, and/or data privacy is paramount. The trick is to get high-performance algorithms to run on hardware that offers limited computation, memory, and electrical power. 
+
+What's new: Michael Bechtel, QiTao Weng, and Heechul Yun at University of Kansas built a neural network that steered DeepPicarMicro, a radio-controlled car outfitted for autonomous driving, around a simple track. This work extends earlier work in which the authors built neural networks for extremely limited hardware.
+
+Key insight: A neural network that controls a model car needs to be small enough to fit on a microcontroller, fast enough to recognize the car’s surroundings while it’s in motion, and accurate enough to avoid crashing. One way to design a network that fits all three criteria is to (i) build a wide variety of architectures within the constraints of size and latency and (ii) test their accuracy empirically.
+
+How it works: The hardware included a NewBright 1:24-scale car with battery pack and motor driver, Raspberry Pi Pico microcontroller, and Arducam Mini 2MP Plus camera. The model was based on PilotNet, a convolutional neural network. The authors built a dataset by manually driving the car around a wide, circular track to collect 10,000 images and associated steering inputs.
+
+    The system’s theoretical processing speed was limited by the camera, which captured an image every 133 milliseconds. To match the neural network’s inference latency to that rate, the authors ran 50 neural networks of different sizes and measured their latency. Fitting a linear regression model to the latency and number of multiply-add operations a given network performed revealed that the number of multiply-add operations predicted execution speed almost perfectly. The magic number: 470,000.
+    The authors conducted a grid search of around 350 PilotNet variations that contained different layer widths and depths within the allowed number of multiply-adds. They trained each network and tested its accuracy.
+
+Results: The authors selected 16 models with various losses and latencies and tested them on the track. The best model completed seven laps before crashing. (Seven models failed to complete a single lap.) The models that managed at least one lap tended to achieve greater than 80 percent accuracy on the test set and latency lower than 100 milliseconds.
+
+Why it matters: This work shows neural networks, properly designed, can achieve useful results on severely constrained hardware. For a rough comparison, the Nvidia Tegra X2 processor that drives a Skydio 2+ drone provides four cores that run at 2 gigaHertz, while the Raspberry Pi Pico’s processor provides two cores running at 133 megaHertz. Neural networks that run on extremely low-cost, low-power hardware could lead to effective devices that monitor environmental conditions, health of agricultural crops, operation of remote equipment like wind turbines, and much more. 
+
+We’re thinking: Training a small network to deliver good performance is more difficult than training a larger one. New methods will be necessary to narrow the gap.
+
+ 
+Work With Andrew Ng
+
+ 
+
+AI/ML Researcher/Engineer: Esteam seeks an artificial intelligence and machine learning engineer to own and scale its natural language processing, voice recognition, generative, and large language models. The ideal candidate has a clear understanding of deep learning, graphical models, reinforcement learning, computer perception, natural language processing, and data representation. Apply here
+
+ 
+
+Curriculum Product Manager: DeepLearning.AI seeks a curriculum product manager to create high-quality educational content with our network of AI experts. The ideal candidate has technical AI skills, a strong sense of teamwork, and experience as an educator. Apply here
+
+ 
+
+DevOps Engineer: DeepLearning.AI seeks an engineer with strong computer science fundamentals and a passion for improving learner experiences. The ideal candidate will thrive in an early development stage of a leading educational environment that focuses on AI-related topics. The role is responsible for designing, implementing, and maintaining the infrastructure that supports software development and deployment processes. Apply here
+
+ 
+
+Frontend Engineer: DeepLearning.AI seeks an engineer with strong computer science fundamentals to develop our educational products. The role is responsible for building and delivering high-quality experiences for technical content. You will work alongside a team of talented content creators and outside partners to build the infrastructure for world-renowned AI-driven education. Apply here
+
+ 
+
+Subscribe and view previous issues here.
+
+ 
+
+Thoughts, suggestions, feedback? Please send to thebatch@deeplearning.ai. Avoid our newsletter ending up in your spam folder by adding our email address to your contacts list.
+
+ 
+
+DeepLearning.AI, 195 Page Mill Road, Suite 115, Palo Alto, CA 94306, United States
+
+Unsubscribe Manage preferences
+LinkedIn
+	
+Twitter
+	
+Facebook
+	
+Instagram
+	
